@@ -1,0 +1,105 @@
+{
+    "Personal Information": {
+        "Name": "Aditya Singh"
+    },
+    "Education": [
+        {
+            "Degree": "Bachelor of Technology in Computer Science",
+            "Institution": "Indian Institute of Technology, Mumbai",
+            "Graduation Date": "2020",
+            "CGPA": "8.7/10"
+        },
+        {
+            "Degree": "Higher Secondary (12th Standard)",
+            "Institution": "Delhi Public School, New Delhi",
+            "Completion Date": "2016",
+            "Percentage": "92%"
+        },
+        {
+            "Degree": "Secondary School (10th Standard)",
+            "Institution": "Delhi Public School, New Delhi",
+            "Completion Date": "2014",
+            "Percentage": "90%"
+        }
+    ],
+    "Additional Qualifications": [
+        {
+            "Score": "49 (2021)"
+        },
+        {
+            "Specialization": "Machine Learning Specialization - Coursera",
+            "Year": "2021"
+        },
+        {
+            "Certification": "AWS Certified Solutions Architect - Associate",
+            "Year": "2022"
+        },
+        {
+            "Certification": "Google Cloud Professional Data Engineer",
+            "Year": "2023"
+        }
+    ],
+    "Skills": [
+        {
+            "Language": "Python, Java, C++"
+        },
+        {
+            "Technology": "HTML, CSS, JavaScript, React"
+        },
+        {
+            "Database Management": "MySQL, MongoDB"
+        },
+        {
+            "Machine Learning": "TensorFlow, scikit-learn"
+        },
+        {
+            "Cloud Platforms": "AWS, Google Cloud"
+        }
+    ],
+    "Projects": [
+        {
+            "Project Name": "Smart Traffic Management System",
+            "Description": "Developed an AI-based system to optimize traffic light timings. Used computer vision and deep learning techniques. Reduced average wait time at intersections by 30%"
+        },
+        {
+            "Project Name": "E-commerce Website",
+            "Description": "Built a full-stack e-commerce platform using MERN stack. Implemented features like user authentication, product catalog, and payment integration. Achieved 1000+ active users within first month of launch"
+        }
+    ],
+    "Experience": [
+        {
+            "Job Title": "Software Developer Intern",
+            "Company": "Tech Innovations Pvt. Ltd., Bangalore",
+            "Duration": "May 2019 - July 2019",
+            "Responsibilities": [
+                {
+                    "Task": "Developing RESTful APIs for a mobile application"
+                },
+                {
+                    "Task": "Collaborated with the frontend team to integrate APIs"
+                },
+                {
+                    "Task": "Improved API response time by 40% through optimization techniques"
+                }
+            ]
+        },
+        {
+            "Job Title": "Junior Data Scientist",
+            "Company": "DataMinds Solutions, Mumbai",
+            "Duration": "August 2020 - Present",
+            "Responsibilities": [
+                {
+                    "Task": "Developing machine learning models for predictive maintenance in manufacturing"
+                },
+                {
+                    "Task": "Implementing data pipelines for efficient data processing and analysis"
+                },
+                {
+                    "Task": "Presenting insights to stakeholders and writing technical documentation"
+                }
+            ]
+        }
+    ],
+    "Achievements": [],
+    "Certifications": []
+}
