@@ -5,11 +5,18 @@ import Card from './Card';
 import FileUploadPopup from './FileUploadPopup';
 import StructuredJDPopup from './StructuredJDPopup';
 import CalculationPopup from './CalculationPopup';
+import { useAuth } from './AuthContext';
 
 const Home = () => {
   const [activePopup, setActivePopup] = useState(null);
   const navigate = useNavigate();
   const cardsRef = useRef(null);
+  const { logout } = useAuth();  // Get the logout function from AuthContext
+
+  const handleLogout = () => {
+    logout();
+    navigate('/');
+  };
 
   const handleStructuredJDSubmit = async (data) => {
     // ... (implementation)
@@ -62,9 +69,24 @@ const Home = () => {
     }
   };
 
-  const startCalculation = () => {
+  const startCalculation = async () => {
     setActivePopup('calculation');
+  
+    try {
+      const response = await fetch('http://localhost:5000/calculate-matching-scores', {
+        method: 'POST',
+      });
+  
+      if (response.ok) {
+        console.log('Matching scores calculated successfully');
+      } else {
+        console.error('Error calculating matching scores');
+      }
+    } catch (error) {
+      console.error('Error calculating matching scores:', error);
+    }
   };
+  
 
   const scrollToCards = () => {
     cardsRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -75,20 +97,23 @@ const Home = () => {
       {/* First screen: Centered text and bottom button */}
       <div className="h-screen flex flex-col relative">
         {/* Project name */}
-        <div className="absolute top-4 left-4 text-xl font-bold text-white">
+        <div className="absolute top-4 left-4 text-xl font-bold text-black">
           skillFusion Extractor
         </div>
 
-        {/* Profile icon */}
+        {/* Profile icon with logout functionality */}
         <div className="absolute top-4 right-4">
-          <button className="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white hover:from-blue-600 hover:to-indigo-700 transition-all duration-300">
+          <button 
+            onClick={handleLogout}  // Trigger logout on click
+            className="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white hover:from-blue-600 hover:to-indigo-700 transition-all duration-300"
+          >
             <User size={20} />
           </button>
         </div>
 
         {/* Centered content */}
         <div className="flex-grow flex flex-col items-center justify-center px-4">
-          <h1 className="text-5xl font-bold text-center mb-4 text-white">
+          <h1 className="text-5xl font-bold text-center mb-4 text-black">
             Make the Process Easy!
           </h1>
         </div>
@@ -105,13 +130,11 @@ const Home = () => {
         </div>
       </div>
 
-       
-       
-
       {/* Cards section */}
-      <div ref={cardsRef} className="min-h-screen flex items-center justify-center bg-dark px-4 sm:px-6 lg:px-8">
+      <div ref={cardsRef} className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl w-full">
           <div className="grid grid-cols-3 gap-6">
+            {/* Cards setup (existing code) */}
             {/* First row */}
             <div className="col-span-3 grid grid-cols-3 gap-6">
               <Card
@@ -120,8 +143,8 @@ const Home = () => {
                 icon={Users}
                 onClick={() => setActivePopup('interviewers')}
                 buttonText="Upload"
-                bgColor="#000000" // Light color
-                buttonColor="#ffffff" // Slightly darker color
+                bgColor="#f4f4f9" // Light color
+                buttonColor="#ccccd9" // Slightly darker color
               />
               <Card
                 title="Job Description"
@@ -129,8 +152,8 @@ const Home = () => {
                 icon={Users}
                 onClick={() => setActivePopup('candidates')}
                 buttonText="Upload"
-                bgColor="#000000" // Light color
-                buttonColor="#ffffff" // Slightly darker color
+                bgColor="#f4f4f9" // Light color
+                buttonColor="#ccccd9" // Slightly darker color
               />
               <Card
                 title="Structured JD"
@@ -138,8 +161,8 @@ const Home = () => {
                 icon={BookOpen}
                 onClick={() => setActivePopup('structuredJD')}
                 buttonText="Open Form"
-                bgColor="#000000"
-                buttonColor="#ffffff"
+                bgColor="#f4f4f9" // Light color
+                buttonColor="#ccccd9"
               />
             </div>
             {/* Second row */}
@@ -150,8 +173,8 @@ const Home = () => {
                 icon={Calculator}
                 onClick={startCalculation}
                 buttonText="Calculate"
-                bgColor="#000000" // Light color
-                buttonColor="#ffffff" // Slightly darker color
+                bgColor="#f4f4f9" // Light color
+                buttonColor="#ccccd9" // Slightly darker color
               />
               <Card
                 title="Dashboard"
@@ -159,8 +182,8 @@ const Home = () => {
                 icon={BarChart}
                 onClick={() => navigate('/dashboard')}
                 buttonText="View"
-                bgColor="#000000" // Light color
-                buttonColor="#ffffff" // Slightly darker color
+                bgColor="#f4f4f9" // Light color
+                buttonColor="#ccccd9" // Slightly darker color
               />
             </div>
           </div>
@@ -189,8 +212,5 @@ const Home = () => {
     </div>
   );
 };
-
-
-
 
 export default Home;

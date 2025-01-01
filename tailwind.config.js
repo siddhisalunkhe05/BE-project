@@ -3,7 +3,6 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
-  darkMode: 'class', // Enable dark mode
   theme: {
     extend: {
       colors: {
@@ -29,10 +28,10 @@ module.exports = {
         },
       },
       backgroundColor: {
-        'dark': '#1a202c', // Dark background color
+        'light': '#ffffff', // Light background color
       },
       textColor: {
-        'dark': '#ffffff', // Dark mode text color
+        'light': '#000000', // Light mode text color
       },
     },
   },

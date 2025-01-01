@@ -14,18 +14,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-/* Apply dark theme globally */
-body {
-  @apply bg-dark text-dark;
-  background-image: url('./assets/images/bg5.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  min-height: 100vh;
-}
-
-/* Ensure all text is white in dark mode */
-.dark {
-  @apply text-white;
-}
-

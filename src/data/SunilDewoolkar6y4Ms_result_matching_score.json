@@ -1,0 +1,51 @@
+{
+    "candidate_name": "Sunil Dewoolkar",
+    "matching_score": 60,
+    "skill_match": 0.15,
+    "experience_match": 0.42,
+    "culture_fit": 0.05,
+    "employed_status": "employed",
+    "location": "Satara, Maharashtra, India",
+    "total_experience": 6,
+    "skills": [
+        "SQL",
+        "PostgreSQL",
+        "MySQL",
+        "Apache",
+        "Git",
+        "Shell Scripting",
+        "Redshift"
+    ],
+    "summary": "Experienced Software Engineer with 6+ years of experience in data analysis, identify patterns, and extract actionable insights and information from multiple sources.",
+    "current_role": "Software Application Engineer 2",
+    "recent_roles": [
+        {
+            "title": "Software Application Engineer 2",
+            "company": "Hewlett Packard",
+            "duration": "August 2022 - Present"
+        },
+        {
+            "title": "Software Engineer",
+            "company": "Ugam Solutions Pvt. Ltd",
+            "duration": "December 2020 - August 2022"
+        },
+        {
+            "title": "Technical Support Executive",
+            "company": "Cnergyis Infotech Pvt. Ltd",
+            "duration": "May 2018 - December 2020"
+        },
+        {
+            "title": "Web Developer",
+            "company": "Instinct Innovations Pvt. Ltd",
+            "duration": "November 2017 - April 2018"
+        }
+    ],
+    "contact_info": {
+        "email": "sunildewoolkar18@gmail.com",
+        "phone": "9309571266",
+        "linkedin": "https://in.linkedin.com/in/sunil-dewoolkar-866884193"
+    },
+    "resume_insights": {
+        "Certifications": "DevOps On AWS"
+    }
+}
